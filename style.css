@@ -141,9 +141,9 @@ body {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.3);
   bottom: 166px;
-  left: 243px;
   animation: scale 3s linear infinite;
   z-index: -1;
+  margin: 0 auto;
 }
 
 /* To move the envelope up and down */
