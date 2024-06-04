@@ -143,7 +143,6 @@ body {
   bottom: 166px;
   animation: scale 3s linear infinite;
   z-index: -1;
-  margin: 0 auto;
 }
 
 /* To move the envelope up and down */
