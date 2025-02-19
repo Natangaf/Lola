@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+h1, h2 {
+    color: #333;
+}
+.question {
+    margin-bottom: 20px;
+}
+.question p {
+    font-weight: bold;
+}
+.options {
+    margin-left: 20px;
+}
+.options label {
+    display: block;
+    margin-bottom: 10px;
+}
+.submit-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.submit-button:hover {
+    background-color: #218838;
+}
