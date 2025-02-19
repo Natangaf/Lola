@@ -23,8 +23,8 @@ h2 {
     font-size: 1.8em;
     margin-top: 30px;
     margin-bottom: 15px;
-    border-bottom: 2px solid #3498db;
     padding-bottom: 5px;
+    color: white;
 }
 
 .container {
@@ -117,4 +117,28 @@ hr {
     height: 1px;
     background: #ddd;
     margin: 30px 0;
+}
+  /* Estilização do toaster (mensagem flutuante) */
+  .toaster {
+
+    background-color: #fff;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    display: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.toaster.aprovado {
+    background-color: green;
+}
+
+.toaster.reprovado {
+    background-color: red;
 }
