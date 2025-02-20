@@ -71,20 +71,24 @@
             button.innerHTML = '<i class="fa-solid fa-volume-mute"></i>'; // Ícone de som desligado
         }
     }
+    document.addEventListener("DOMContentLoaded", function() {
+        let video = document.getElementById("bg-video");
+        video.play().catch(error => console.log("Autoplay bloqueado:", error));
+    });
     function openCard() {
-        location.href = "/Valentine";
+        location.href = "/lola/Valentine";
     }
     function openAssembleia() {
-        location.href = "/PrimeriaAssembleia";
+        location.href = "/lola/PrimeriaAssembleia";
     }
     function openAma() {
-        location.href = "/meAma";
+        location.href = "/lola/meAma";
     }
     function openEsqueci() {
-        location.href = "/Esqueci";
+        location.href = "/lola/Esqueci";
     }
     function openSimulado() {
-        location.href = "/Simulado";
+        location.href = "/lola/Simulado";
     }
 
 </script>
