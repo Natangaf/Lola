@@ -64,6 +64,7 @@
         let button = document.getElementById("mute-btn");
 
         if (video.muted) {
+            video.play(); // Toca o vídeo
             video.muted = false;
             button.innerHTML = '<i class="fa-solid fa-volume-up"></i>'; // Ícone de som ligado
         } else {
