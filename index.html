@@ -7,60 +7,78 @@
     <title>Para Onde Quer Ir, Lola?</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="styled.css">
+
 </head>
 
 <body>
+    <div class="video-overlay">
+        <video id="bg-video" autoplay loop playsinline>
+            <source src="/video/principal.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+
     <header>
+
         <h1>Para Onde Quer Ir, Lola?</h1>
         <p>Um site especial só para você!</p>
     </header>
+
     <section class="welcome">
         <h2>Bem-vinda ao nosso espaço!</h2>
         <p>Aqui você encontrará tudo que criamos juntos. Espero que goste!</p>
     </section>
     <main>
         <div class="folder" id="card" onclick="openCard()">
-            <div class="overlay"></div>
-            <img src="pic/mail.svg" alt="card" />
+            <i class="fa-solid fa-envelope"></i>
             <p>Cartão</p>
         </div>
-        <div class="folder" id="card" onclick="openCard()">
-            <div class="overlay"></div>
-            <img src="pic/mail.svg" alt="card" />
-            <p>Cartão</p>
-        </div>
-        <div class="folder" id="card" onclick="openCard()">
-            <div class="overlay"></div>
-            <img src="pic/mail.svg" alt="card" />
-            <p>Nossa Primeira Assembleia</p>
-        </div>
-        <div class="folder" id="card" onclick="openCard()">
-            <div class="overlay"></div>
-            <img src="pic/mail.svg" alt="card" />
+        <div class="folder" id="Esqueci" onclick="openEsqueci()">
+            <i class="fa-solid fa-question-circle"></i>
             <p>Esqueci?</p>
         </div>
-        <div class="folder" id="card" onclick="openCard()">
-            <div class="overlay"></div>
-            <img src="pic/mail.svg" alt="card" />
+        <div class="folder" id="Ama" onclick="openAma()">
+            <i class="fa-solid fa-heart"></i>
+            <p>Você me Ama?</p>
+        </div>
+        <div class="folder" id="Assembleia" onclick="openAssembleia()">
+            <i class="fa-solid fa-building-columns"></i>
+            <p>Nossa Primeira Assembleia</p>
+        </div>
+        <div class="folder" id="Simulado" onclick="openSimulado()">
+            <i class="fa-solid fa-clipboard-list"></i>
             <p>Simulado</p>
         </div>
-        <div class="folder" id="card" onclick="openCard()">
-            <div class="overlay"></div>
-            <img src="pic/mail.svg" alt="card" />
-            <p>Cartãozinho</p>
-        </div>
-
     </main>
     <footer>
-        <p>&copy; 2025 Meu Amor por Lola ❤️</p>
+        <p>&copy; 2025 Meu Amor por Lola 💜</p>
+        <button id="mute-btn" onclick="toggleMute()">
+            <i class="fa-solid fa-volume-up"></i>
+        </button>
     </footer>
 </body>
 <script>
+    function toggleMute() {
+        let video = document.getElementById("bg-video");
+        let button = document.getElementById("mute-btn");
+
+        if (video.muted) {
+            video.muted = false;
+            button.innerHTML = '<i class="fa-solid fa-volume-up"></i>'; // Ícone de som ligado
+        } else {
+            video.muted = true;
+            button.innerHTML = '<i class="fa-solid fa-volume-mute"></i>'; // Ícone de som desligado
+        }
+    }
     function openCard() {
         location.href = "/Valentine";
     }
-    function openPrimeriaAssembleia() {
+    function openAssembleia() {
         location.href = "/PrimeriaAssembleia";
+    }
+    function openAma() {
+        location.href = "/meAma";
     }
     function openEsqueci() {
         location.href = "/Esqueci";
