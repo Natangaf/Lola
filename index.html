@@ -50,6 +50,10 @@
             <i class="fa-solid fa-clipboard-list"></i>
             <p>Simulado</p>
         </div>
+        <div class="folder" id="flores" onclick="openFlores()">
+            <i class="fa-solid fas fa-fan"></i>
+            <p>Flores</p>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 Meu Amor por Lola 💜</p>
@@ -64,7 +68,6 @@
         let button = document.getElementById("mute-btn");
 
         if (video.muted) {
-            video.play(); // Toca o vídeo
             video.muted = false;
             button.innerHTML = '<i class="fa-solid fa-volume-up"></i>'; // Ícone de som ligado
         } else {
@@ -90,6 +93,9 @@
     }
     function openSimulado() {
         location.href = "/Lola/Simulado";
+    }
+    function openFlores() {
+        location.href = "/Lola/flores";
     }
 
 </script>
