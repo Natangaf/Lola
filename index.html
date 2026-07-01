@@ -29,6 +29,30 @@
         <h2>Bem-vinda ao nosso espaço!</h2>
         <p>Aqui você encontrará tudo que criamos juntos. Espero que goste!</p>
     </section>
+
+    <section class="countdown">
+        <h2>Contagem Regressiva 💜</h2>
+        <p>Faltam para o nosso dia especial (06/11/2026):</p>
+        <div class="countdown-timer" id="countdown-timer">
+            <div class="time-block">
+                <span id="cd-days">00</span>
+                <label>Dias</label>
+            </div>
+            <div class="time-block">
+                <span id="cd-hours">00</span>
+                <label>Horas</label>
+            </div>
+            <div class="time-block">
+                <span id="cd-minutes">00</span>
+                <label>Minutos</label>
+            </div>
+            <div class="time-block">
+                <span id="cd-seconds">00</span>
+                <label>Segundos</label>
+            </div>
+        </div>
+    </section>
+
     <main>
         <div class="folder" id="card" onclick="openCard()">
             <i class="fa-solid fa-envelope"></i>
@@ -97,6 +121,30 @@
     function openFlores() {
         location.href = "/Lola/flores";
     }
+
+    function updateCountdown() {
+        const targetDate = new Date("2026-11-06T00:00:00");
+        const now = new Date();
+        const diff = targetDate - now;
+        const timerEl = document.getElementById("countdown-timer");
+
+        if (diff <= 0) {
+            timerEl.innerHTML = "<p>Chegou o grande dia! 💜</p>";
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById("cd-days").textContent = String(days).padStart(2, "0");
+        document.getElementById("cd-hours").textContent = String(hours).padStart(2, "0");
+        document.getElementById("cd-minutes").textContent = String(minutes).padStart(2, "0");
+        document.getElementById("cd-seconds").textContent = String(seconds).padStart(2, "0");
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
 
 </script>
 

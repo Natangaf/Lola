@@ -42,6 +42,43 @@
             font-size: 1.2rem;
         }
 
+        .countdown {
+            padding: 20px 30px;
+        }
+
+        .countdown h2 {
+            color: #4a148c;
+            margin-bottom: 5px;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .time-block {
+            background: white;
+            border-radius: 15px;
+            width: 80px;
+            padding: 12px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .time-block span {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #6a1b9a;
+        }
+
+        .time-block label {
+            font-size: 0.8rem;
+            color: #4a148c;
+        }
+
         main {
             display: flex;
             flex-wrap: wrap;
