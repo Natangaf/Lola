@@ -51,6 +51,15 @@
             margin-bottom: 5px;
         }
 
+        .countdown-quote {
+            max-width: 600px;
+            margin: 25px auto 0;
+            font-style: italic;
+            font-size: 1rem;
+            color: #4a148c;
+            line-height: 1.6;
+        }
+
         .countdown-timer {
             display: flex;
             justify-content: center;
